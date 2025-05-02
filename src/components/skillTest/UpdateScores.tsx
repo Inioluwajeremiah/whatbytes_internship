@@ -1,5 +1,5 @@
 "use client";
-import { IUpdateScores } from "@/interfaces/dashboardInterface";
+import { IUpdateScores } from "@/interfaces/Interface";
 import React from "react";
 
 const UpdateScores: React.FC<IUpdateScores> = ({

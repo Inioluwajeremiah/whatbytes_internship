@@ -27,3 +27,20 @@ export interface IGraphData {
 export interface IQuestionAnalysisGraphData {
   data: IGraphData[];
 }
+export interface RenderActiveShapeProps {
+  cx: number;
+  cy: number;
+  midAngle: number;
+  innerRadius: number;
+  outerRadius: number;
+  startAngle: number;
+  endAngle: number;
+  fill: string;
+  payload: {
+    name: string;
+    value: number;
+    [key: string]: any; // for extensibility
+  };
+  percent: number;
+  value: number;
+}

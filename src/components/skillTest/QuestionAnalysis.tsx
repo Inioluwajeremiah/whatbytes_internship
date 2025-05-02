@@ -1,12 +1,11 @@
 import React from "react";
 import QuestionAnalysisPieChart from "./QuestionAnalysisPieChart";
-import { IQuestionAnalysis } from "@/interfaces/dashboardInterface";
+import { IQuestionAnalysis } from "@/interfaces/Interface";
 
 const QuestionAnalysis: React.FC<IQuestionAnalysis> = ({
   score,
   totalQuestion,
 }) => {
-  const COLORS = ["#4ade80", "#f87171"];
   return (
     <div className="min-w-[300px] ">
       <div className="w-full flex flex-row justify-between items-center">

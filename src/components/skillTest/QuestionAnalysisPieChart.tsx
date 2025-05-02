@@ -1,6 +1,9 @@
 "use client";
 
-import { IQuestionAnalysisGraphData } from "@/interfaces/dashboardInterface";
+import {
+  IQuestionAnalysisGraphData,
+  RenderActiveShapeProps,
+} from "@/interfaces/Interface";
 import React, { useState } from "react";
 import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 
@@ -83,7 +86,7 @@ const QuestionAnalysisPieChart: React.FC<IQuestionAnalysisGraphData> = ({
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const onPieEnter = (_: any, index: number) => {
+  const onPieEnter = (_: string, index: number) => {
     setActiveIndex(index);
   };
 

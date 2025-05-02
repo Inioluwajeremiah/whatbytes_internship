@@ -5,6 +5,7 @@ import QuickStats from "@/components/skillTest/QuickStats";
 import SyllabusWiseAnalysis from "@/components/skillTest/SyllabusWiseAnalysis";
 import UpdateScores from "@/components/skillTest/UpdateScores";
 import { SyllabusWiseAnalysisData, htmlData } from "@/data/dashboardData";
+import Image from "next/image";
 
 import { useEffect, useState } from "react";
 
@@ -50,7 +51,13 @@ export default function Home() {
         {/* html div */}
         <div className="flex flex-col justify-start sm:flex-row items-start sm:items-center sm:justify-between gap-6 p-4 border border-gray-200 rounded-md">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <img src="/html.png" alt="html icon" className="w-10 h-10" />
+            <Image
+              src="/html.png"
+              alt="html icon"
+              className="w-10 h-10"
+              width={40}
+              height={40}
+            />
             <div>
               <p className="font-bold text-base ">{htmlData.title}</p>
               <p className="text-base text-gray-700 font-medium">
@@ -85,17 +92,14 @@ export default function Home() {
 
       {/* update score modal by clicking on update button */}
       {toggleUpdateModal && (
-        <Modal
-          closeModal={() => setToggleUpdateModal(false)}
-          children={
-            <UpdateScores
-              statsData={statsData}
-              totalQuestion={totalQuestion}
-              handleFormInput={handleFormInput}
-              closeModal={() => setToggleUpdateModal(false)}
-            />
-          }
-        />
+        <Modal closeModal={() => setToggleUpdateModal(false)}>
+          <UpdateScores
+            statsData={statsData}
+            totalQuestion={totalQuestion}
+            handleFormInput={handleFormInput}
+            closeModal={() => setToggleUpdateModal(false)}
+          />
+        </Modal>
       )}
     </div>
   );

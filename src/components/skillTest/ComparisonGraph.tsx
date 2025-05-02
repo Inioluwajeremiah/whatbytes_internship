@@ -1,4 +1,4 @@
-import { IQuestionAnalysisGraphData } from "@/interfaces/dashboardInterface";
+import { IQuestionAnalysisGraphData } from "@/interfaces/Interface";
 import React from "react";
 import {
   LineChart,

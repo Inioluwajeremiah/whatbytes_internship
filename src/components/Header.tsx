@@ -8,8 +8,6 @@ const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const location = usePathname();
   const [pathname, setPathname] = useState<string>("");
-  // const navHeight = window.innerHeight - 80;
-  const navHeight = 1000;
   const navData = [
     {
       title: "Dashboard",

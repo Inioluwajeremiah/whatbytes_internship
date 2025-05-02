@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import ComparisonGraph from "./ComparisonGraph";
+import React from "react";
 import { quickStatsData } from "@/data/dashboardData";
-import { IQuickStats } from "@/interfaces/dashboardInterface";
+import { IQuickStats } from "@/interfaces/Interface";
 import PercentileLineChart from "./ComparisonGraph";
 
 const QuickStats: React.FC<IQuickStats> = ({ statsData }) => {
