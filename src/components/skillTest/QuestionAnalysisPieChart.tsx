@@ -1,12 +1,10 @@
 "use client";
 
-import {
-  IQuestionAnalysisGraphData,
-  RenderActiveShapeProps,
-} from "@/interfaces/Interface";
+import { IQuestionAnalysisGraphData } from "@/interfaces/Interface";
 import React, { useState } from "react";
 import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const renderActiveShape = (props: any) => {
   const RADIAN = Math.PI / 180;
   const {
